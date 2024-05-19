@@ -93,6 +93,11 @@ body {
     z-index: 100;
 }
 
+.navbar-brand img {
+    border-radius: 20px;
+    
+}
+
 /* The middle boxes  */
 
 .my_img {
