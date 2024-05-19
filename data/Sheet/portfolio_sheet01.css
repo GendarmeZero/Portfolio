@@ -1,0 +1,799 @@
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
+/* This webpage was made from ground up using overflow design method to challenge myself and to test some ideas */
+/* This design method IS NOT RECOMMENDED but as I mentioned I made it to challenge myself and to test some ideas */
+
+/* Ala Ayyalslman */
+/* علاء عيال سلمان */
+/* 5-19-2024 */
+/* 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡿⠛⢶⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣦⠀⣠⡾⠛⠙⠛⠋⠀⠀⠀⠈⠉⠛⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢾⡇⠙⠛⠋⢀⣤⣀⠀⣀⣤⣤⡀⠀⠀⠀⠈⠻⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣧⡀⢀⡤⠋⠀⠈⠉⠉⠀⠉⠳⠤⠤⠴⢦⡄⠸⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣀⡿⠿⠾⠀⠀⠀⠀⠀⢴⣦⡀⠀⠀⠀⣠⠟⠀⢹⡇⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⡟⠀⣴⡄⠀⢀⡄⠀⠀⣦⡈⠃⠀⠀⡾⣳⣄⠀⣼⡇⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣠⡶⠟⠻⠶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡿⠀⠀⠿⠁⢀⡞⠁⠀⠀⣿⠗⠀⠀⠀⣟⢮⣿⣆⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢸⠏⠀⠀⠀⣰⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⡇⠀⠀⠀⠰⣯⡀⠀⠀⠀⠀⠀⠀⠀⠀⠪⣳⡵⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢸⡀⠀⠀⢰⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣇⠀⣦⣀⠀⠈⠉⢀⣀⣰⣦⡀⠀⠀⠀⠀⠈⠉⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠘⣷⠀⠀⠘⢷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⡆⠻⠦⣌⣉⣉⣁⡤⠔⠻⡇⠀⠀⠀⣀⣠⣼⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⢠⡾⠛⠉⠙⠛⠲⢦⣄⠀⠙⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣄⠀⠀⠲⠇⠀⠀⠀⠀⠀⠀⢀⣴⢏⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⢸⣇⣀⣀⣀⡀⠀⠀⠈⣧⠀⠈⣿⣦⣄⡀⠀⠀⠀⠀⠀⠀⢀⣻⣦⣄⠀⠀⠀⠀⠀⠀⡠⠔⣿⠓⢶⣤⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⢸⠟⠁⠀⠈⠉⠙⠳⢴⡏⠀⠀⣿⡇⠈⠙⠻⠶⠤⠴⠶⠛⠋⠹⡀⠈⠻⣶⣤⠤⠄⣀⣠⠞⠁⠀⢸⠀⠈⠙⠳⢦⣄⠀⠀⠀⠀⠀⠀⠀
+⠸⣧⣤⣤⣤⣤⣀⡀⠀⣷⢀⣼⠃⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢦⣀⠀⠉⠉⠉⠉⠀⠀⢀⣴⠏⠀⠀⠀⠀⠀⠉⠻⣦⣄⠀⠀⠀⠀
+⢰⡏⠀⢠⠀⠀⠈⠉⢺⠁⢈⡞⢀⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠒⢦⠀⠀⠀⢸⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢷⡄⠀⠀
+⠀⠻⣦⣈⠙⠶⠤⠴⢞⣠⠞⢀⡞⠀⠀⠀⠀⠀⠀⠀⠀⢀⣦⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠈⡆⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠈⠻⣆⠀
+⠀⠀⠈⠉⠉⠛⠛⠛⠯⢤⣤⣎⣀⠀⠀⠀⢀⣀⣠⣤⣾⠛⠁⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⢻⠀⠀⠀⠈⡆⠀⠀⡀⠀⠀⠀⠀⠀⠙⣇
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠙⠛⠛⠛⠛⠉⠉⠠⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⢇⠀⠀⠀⠀⡇⠀⠀⠀⡇⠀⣰⠏⠀⠀⠀⠀⠀⠀⡿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⢃⠀⠀⠀⢸⣰⠁⠀⠀⠀⠀⠀⠀⣸⠇
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡄⠀⠀⠀⠀⠀⠀⠀⠀⢸⡄⠀⠀⠀⢸⠀⠀⢀⣸⡇⠀⠀⠀⠀⠀⠀⣰⠏⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠛⠢⣄⡀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠸⣤⠴⠛⠁⣿⠤⢤⡀⠀⢀⡼⠏⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠉⠉⠓⠒⠶⠶⠞⠁⠀⠀⠀⠀⠁⠀⠀⠀⢿⠀⠀⠈⢳⡟⠁⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⢻⠀⠀⣀⡼⠃⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠙⠢⢄⣀⡀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⡴⠞⠋⠀⠀⡇⠛⣻⡄⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡏⠀⠀⠀⠈⠉⠉⠛⠛⠛⠛⠛⠉⠉⠉⠀⠀⠀⠀⠀⠀⡟⠛⠋⠁⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⡖⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⠃⠀⠀⠀⠀⠀⠀⠀⠀⢀⡾⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⡇⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⠃⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⠇⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⠁⠀⠀⠀⠀⠀⠀⠀⠀⢰⡟⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⡏⠀⠀⠀⠀⠀⠀⠀⠀⢀⡿⠁⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⣸⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⠃⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⡇⠀⠀⠀⠀⠀⠀⠀⠀⣸⠏⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢘⣧⣄⡀⠀⠀⠀⠀⣀⡼⠏⠀⠀⠀⠀⢻⡖⠶⡤⠤⠤⠤⠶⠛⠶⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠁⠀⠉⠙⠛⠛⣿⠋⠀⠀⠀⠀⠀⠀⠘⠻⠶⠿⠶⣦⣀⣀⠀⠀⠀⢉⣻⡆⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣧⣀⣀⣠⣴⠞⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀
+ */
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
+
+/* Body Core  */
+body {
+    background-color: #e4dbd2;
+    background: linear-gradient(95deg, #35374B, #f1ebe6, #5F574E, #F3E6D8);
+    background-size: 200% 200%;
+    animation: bg_color 15s infinite linear;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: url('https://i.ibb.co/q9sMPWK/cursor.png'), auto;
+    scroll-behavior: smooth;
+
+}
+
+@keyframes bg_color {
+
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* Navbar Core */
+.navbar01 {
+    width: 100rem;
+    border-radius: 20px;
+    top: 0;
+    z-index: 999;
+    opacity: 80%;
+}
+
+#sing img {
+    width: 80px;
+    height: 50px;
+    z-index: 100;
+}
+
+/* The middle boxes  */
+
+.my_img {
+    width: 10px;
+    height: 10px;
+    z-index: 2;
+    top: 16.625rem;
+    position: relative;
+
+
+}
+
+.my_img img {
+    width: 46.875rem;
+    height: 43.75rem;
+}
+
+.main_box {
+    height: 62.5rem;
+
+
+}
+
+#box01 {
+    background-color: #F0EBE3;
+    box-shadow: 5px 5px 5px -5px black;
+    height: 62.5rem;
+    width: 93.75rem;
+    border-radius: 50px;
+    position: relative;
+}
+
+#box02 {
+    background-color: #e4dbd2;
+    box-shadow: 15px 5px 15px 2px black;
+    border: solid #E5DDC5;
+    height: 37.5rem;
+    width: 85rem;
+    border-radius: 28px;
+    z-index: 1;
+    position: relative;
+    bottom: 40.625rem;
+    left: 6.875rem;
+}
+
+#box03 {
+    background-color: #e4dbd2;
+    box-shadow: 15px 5px 15px 2px black;
+    height: 15.625rem;
+    width: 34.25rem;
+    border-radius: 28px;
+    z-index: 3;
+    position: relative;
+    bottom: 97.5rem;
+    left: 9.063rem;
+
+}
+
+#box03 ul {
+    text-align: left;
+    list-style-type: none;
+    color: #153448;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    font-size: 5rem;
+}
+
+#box04 {
+    background-color: #dad5cb;
+    box-shadow: 15px 5px 15px 2px black;
+    height: 36.75rem;
+    width: 34.813rem;
+    border-radius: 75px;
+    z-index: -1;
+    position: relative;
+    bottom: 78.25rem;
+    left: 31.25rem;
+}
+
+.main_box_text {
+    box-shadow: 15px 5px 15px 2px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    bottom: 32.5rem;
+    right: 9.375rem;
+    text-align: left;
+    list-style-type: none;
+    color: #2f5057;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    font-size: 4.5rem;
+    z-index: 3;
+
+}
+
+/* buttons */
+
+#contect_me {
+    position: relative;
+    bottom: 26.875rem;
+    right: 6.813rem;
+    height: auto;
+    width: auto;
+    font-family: "Freehand", cursive;
+    font-size: xxx-large;
+    z-index: 3;
+}
+
+.buttons01 {
+    width: 24.688rem;
+    height: 4.688rem;
+    bottom: 27.625rem;
+    z-index: 2;
+    position: relative;
+
+}
+
+.buttons01 button {
+    border-radius: 12px;
+    border: #E7FEFF;
+    cursor: url('https://i.ibb.co/W5VMYYm/tap.png'), auto;
+
+}
+
+.buttons01 ul {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.buttons01 img {
+    width: 50px;
+    height: 50px;
+    cursor: url('https://i.ibb.co/W5VMYYm/tap.png'), auto;
+
+}
+
+#box07 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: 50px;
+    height: 13.75rem;
+    width: 18.125rem;
+    background-color: #B4B4B8;
+    border: solid;
+    position: relative;
+    bottom: 30rem;
+    left: 46.875rem;
+}
+
+#box07a2 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: 50px;
+    height: 13.75rem;
+    width: 18.125rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)),
+        url('') no-repeat;
+    background-size: 312.5rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    position: relative;
+    top: 65.625rem;
+    right: 50rem;
+    z-index: 5;
+}
+
+.box07a2 p {
+    color: #5F574E;
+    font-size: x-large;
+    font-family: "Freehand", cursive;
+
+}
+
+.box07 p {
+    color: #5F574E;
+    font-size: x-large;
+    font-family: "Freehand", cursive;
+
+}
+
+/* about main */
+
+#about_box {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: 30px;
+    height: 9.375rem;
+    width: 23.75rem;
+    background-color: #F0EBE3;
+    border: solid;
+    position: relative;
+    bottom: 47.5rem;
+    right: 19.375rem;
+    z-index: -1;
+    padding: 12px;
+}
+
+.about p {
+    color: #2f5057;
+    font-size: 5rem;
+    font-family: "Playfair Display", serif;
+
+}
+
+/* about me box 1 */
+.about_me01 {
+    background-color: #F0EBE3;
+    background-image: url(https://img1.picmix.com/output/stamp/thumb/0/2/8/8/1508820_3a3c9.gif);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 600px;
+    box-shadow: 5px 5px 5px -5px #f5f2ef;
+    position: relative;
+    height: 56.25rem;
+    width: 68.75rem;
+    border: solid;
+    bottom: 50rem;
+    border-radius: 50px;
+    z-index: 3;
+
+}
+
+.about_me01 h2 {
+    position: relative;
+    color: #2f5057;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 5rem;
+    right: 9.375rem;
+    bottom: 8.75rem;
+
+}
+
+#about_me_01_text01 {
+    font-size: 4rem;
+    position: relative;
+
+}
+
+#about_me_01_text02 {
+    font-size: 2.4rem;
+    position: relative;
+    bottom: 6.875rem;
+    left: 0.75rem;
+    font-family: "Playfair Display", serif;
+}
+
+#time01 {
+    position: relative;
+    left: 55rem;
+    top: 1.875rem;
+    z-index: 3;
+}
+
+
+/* about me box 2 */
+
+.about_me02 {
+    background-color: #F0EBE3;
+    background-image: url(https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHJ2bmR4enFod2dodThkeDFycjM0ZTBlb2tmMGdodm9pZGsyaWp0biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Bpm9iMpbGiKg2Q2rM1/giphy.gif);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 600px;
+    box-shadow: 5px 5px 5px -5px #f5f2ef;
+    position: relative;
+    height: 750px;
+    width: 68.75rem;
+    border: solid;
+    bottom: 45rem;
+    border-radius: 50px;
+    z-index: 3;
+}
+
+.about_me02 h2 {
+    position: relative;
+    color: #2f5057;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 4rem;
+    right: 7.5rem;
+    top: 1.563rem;
+    z-index: 5;
+}
+
+#about_me_01_text03 {
+    font-size: 4rem;
+    position: relative;
+    bottom: 15.625rem;
+    left: 0.625rem;
+}
+
+#about_me_01_text04 {
+    font-size: 2.1rem;
+    position: relative;
+    top: 6.875rem;
+    left: 0.75rem;
+    font-family: "Playfair Display", serif;
+    z-index: 5;
+}
+
+#sticker01 img {
+    position: relative;
+    left: 49.375rem;
+    bottom: 31.875rem;
+    z-index: -1;
+    width: 15.625rem;
+    height: 15.625rem;
+
+}
+
+#box07a3 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: 50px;
+    height: 13.75rem;
+    width: 18.125rem;
+    background-color: #E3E1D9;
+    border: solid;
+    position: relative;
+    bottom: 81.25rem;
+    right: 50rem;
+    z-index: 5;
+}
+
+.box07a3 p {
+    color: #5F574E;
+    font-size: x-large;
+    font-family: "Freehand", cursive;
+
+}
+
+.about00b {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: 30px;
+    height: 9.375rem;
+    width: 23.75rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)),
+        url('') no-repeat;
+    background-size: 5rem;
+    background-position: bottom;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    position: relative;
+    bottom: 94.25rem;
+    right: 39.375rem;
+    z-index: -2;
+    padding: 12px;
+}
+
+.about00b p {
+    color: #2f5057;
+    font-size: 5rem;
+    font-family: "Playfair Display", serif;
+
+}
+
+.box09 {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)),
+        url('https://i.gifer.com/XOsX.gif') no-repeat;
+    background-size: 10rem;
+    background-position: bottom left;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border-radius: 50px;
+    width: 112.5rem;
+    height: 56.25rem;
+    position: relative;
+    bottom: 30.375rem;
+    z-index: -1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    grid-template-areas:
+        "title"
+        "skills"
+        "work";
+}
+
+.box09 p {
+    color: #2f5057;
+    font-size: 3.5rem;
+    font-family: "Playfair Display", serif;
+    text-align: center;
+
+}
+
+.title {
+    grid-area: title;
+    text-align: center;
+    font-size: 24px;
+}
+
+.skills {
+    width: 106.25rem;
+    left: 4.063rem;
+    position: relative;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)),
+        url('') no-repeat;
+    background-size: 312.5rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    grid-area: skills;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    justify-items: center;
+}
+
+.skills ul {
+    display: contents;
+}
+
+.skills li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#github_box {
+    width: 100px;
+}
+
+#figma_box {
+    width: 200px;
+}
+
+.work {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)),
+        url('') no-repeat;
+    background-size: 312.5rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    width: 93.75rem;
+    height: 21.875rem;
+    left: 11.25rem;
+    position: relative;
+    grid-area: work;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    justify-items: center;
+}
+
+.work ul {
+    display: contents;
+}
+
+.work li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Text_list {
+    display: flex;
+    flex-direction: column;
+}
+
+#orange_oa_text {
+    font-size: 2rem;
+}
+
+.about00c {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: 30px;
+    height: 9.375rem;
+    width: 23.75rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)),
+        url('') no-repeat;
+    background-size: 312.5rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    position: relative;
+    bottom: 32.25rem;
+    right: 23.375rem;
+    z-index: -1;
+    padding: 12px;
+}
+
+.about00c p {
+    color: #2f5057;
+    font-size: 5rem;
+    font-family: "Playfair Display", serif;
+
+}
+
+.my_work00a {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: 30px;
+    height: 9.375rem;
+    width: 23.75rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)),
+        url('') no-repeat;
+    background-size: 312.5rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    position: relative;
+    bottom: 22.25rem;
+    right: 23.375rem;
+    z-index: -1;
+    padding: 12px;
+}
+
+.my_work00a p {
+    color: #2f5057;
+    font-size: 5rem;
+    font-family: "Playfair Display", serif;
+
+}
+
+.box10 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)),
+        url('') no-repeat;
+    background-size: 312.5rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border-radius: 50px;
+    width: 75rem;
+    height: 43.75rem;
+    position: relative;
+    bottom: 34.375rem;
+    z-index: -1;
+}
+
+.box10 P {
+    color: #2f5057;
+    font-size: 2.5rem;
+    font-family: "Playfair Display", serif;
+    text-align: center;
+}
+
+.box10 img {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)),
+        url('') no-repeat;
+    background-size: 312.5rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border-radius: 25px;
+    position: relative;
+    width: 800px;
+    left: 200px;
+    bottom: 22px;
+}
+
+.box11 {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)),
+        url('https://mir-s3-cdn-cf.behance.net/project_modules/1400/f1d0d572816947.5c2bcd89d519b.gif') no-repeat;
+    background-size: 1500px 900px;
+    background-position: bottom;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    width: 90rem;
+    height: 53.75rem;
+    position: relative;
+    bottom: 24.375rem;
+    z-index: -1;
+
+}
+
+.box11 h2 {
+    color: #2f5057;
+    font-size: 2.5rem;
+    font-family: "Playfair Display", serif;
+    text-align: center;
+}
+
+.box11 p {
+    color: #2f5057;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    position: relative;
+    left: 120px;
+    top: 20px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 200px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)),
+        url('') no-repeat;
+    background-size: 312.5rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+}
+
+.cards img {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    width: 15%;
+    height: 15%;
+
+}
+
+.cards :last-child {
+    position: relative;
+    top: 15rem;
+    width: 25%;
+    height: 0%;
+}
+
+.box12 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)),
+        url('https://img1.picmix.com/output/stamp/thumb/0/2/8/8/1508820_3a3c9.gif') no-repeat;
+    background-size: 81.25rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    width: 65rem;
+    height: 43.75rem;
+    position: relative;
+    bottom: 14.375rem;
+    z-index: -1;
+}
+
+.box12 h2 {
+    color: #102C57;
+    font-size: 2.5rem;
+    font-family: "Playfair Display", serif;
+    text-align: center;
+
+}
+
+.box12 p {
+    color: #102C57;
+    font-size: 1.5rem;
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.box12 img {
+    width: 400px;
+}
+
+
+/* ////////////////////////////////// */
+/* ////////////////////////////////// */
+/* ////////////////////////////////// */
