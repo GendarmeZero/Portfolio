@@ -2,7 +2,6 @@
 /* ------------------------------------------------------- */
 /* This webpage was made from ground up using overflow design method to challenge myself and to test some ideas */
 /* This design method IS NOT RECOMMENDED but as I mentioned I made it to challenge myself and to test some ideas */
-
 /* Ala Ayyalslman */
 /* علاء عيال سلمان */
 /* 5-19-2024 */
@@ -77,6 +76,9 @@ body {
         background-position: 0% 0%;
     }
 }
+header h1{
+    font-size: xx-small;
+}
 
 /* Navbar Core */
 .navbar01 {
@@ -85,6 +87,7 @@ body {
     top: 0;
     z-index: 999;
     opacity: 80%;
+    font-size: 2.5rem;
 }
 
 #sing img {
@@ -106,8 +109,6 @@ body {
     z-index: 2;
     top: 16.625rem;
     position: relative;
-
-
 }
 
 .my_img img {
@@ -786,18 +787,23 @@ body {
 }
 
 .box12 p {
-    color: #102C57;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)),
+    no-repeat;
+    background-size: 81.25rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     font-size: 1.5rem;
-    font-family: "Playfair Display", serif;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-
+    
 }
 
 .box12 img {
     width: 400px;
 }
-
 
 /* ////////////////////////////////// */
 /* ////////////////////////////////// */
