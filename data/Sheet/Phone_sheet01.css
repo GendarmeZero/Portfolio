@@ -1,0 +1,338 @@
+@media (max-width: 782px) {
+    body {
+        background-size: 1000% 1000%;
+
+    }
+    /* Navbar Core */
+    .navbar01 {
+        width: 50rem;
+        font-size: 1.25rem;
+    }
+
+    #sing img {
+        width: 40px;
+        height: 25px;
+    }
+
+    /* The middle boxes */
+    .my_img {
+        width: 5px;
+        height: 5px;
+        top: 8.3125rem;
+    }
+
+    .my_img img {
+        width: 23.4375rem;
+        height: 21.875rem;
+    }
+
+    .main_box {
+        height: 31.25rem;
+    }
+
+    #box01 {
+        height: 31.25rem;
+        width: 46.875rem;
+    }
+
+    #box02 {
+        height: 18.75rem;
+        width: 42.5rem;
+        bottom: 20.3125rem;
+        left: 3.4375rem;
+    }
+
+    #box03 {
+        height: 7.8125rem;
+        width: 17.125rem;
+        bottom: 48.75rem;
+        left: 4.5315rem;
+    }
+
+    #box03 ul {
+        font-size: 2.5rem;
+    }
+
+    #box04 {
+        height: 18.375rem;
+        width: 17.4065rem;
+        bottom: 39.125rem;
+        left: 15.625rem;
+    }
+
+    .main_box_text {
+        bottom: 16.25rem;
+        right: 4.6875rem;
+        font-size: 2.25rem;
+    }
+
+    /* buttons */
+    #contect_me {
+        bottom: 13.4375rem;
+        right: 3.4065rem;
+        font-size: 1.5rem;
+    }
+
+    .buttons01 {
+        width: 12.344rem;
+        height: 2.344rem;
+        bottom: 13.8125rem;
+    }
+
+    .buttons01 img {
+        width: 25px;
+        height: 25px;
+    }
+
+    #box07 {
+        height: 6.875rem;
+        width: 9.0625rem;
+        bottom: 15rem;
+        left: 23.4375rem;
+    }
+
+    #box07a2 {
+        height: 6.875rem;
+        width: 9.0625rem;
+        background-size: 156.25rem;
+        top: 32.8125rem;
+        right: 25rem;
+    }
+
+    .box07a2 p {
+        font-size: 0.75rem;
+    }
+
+    .box07 p {
+        font-size: 0.75rem;
+    }
+
+    /* about main */
+    #about_box {
+        height: 4.6875rem;
+        width: 11.875rem;
+        bottom: 23.75rem;
+        right: 9.6875rem;
+    }
+
+    .about p {
+        font-size: 2.5rem;
+    }
+
+    /* about me box 1 */
+    .about_me01 {
+        background-size: 300px;
+        height: 28.125rem;
+        width: 34.375rem;
+        bottom: 25rem;
+    }
+
+    .about_me01 h2 {
+        font-size: 2.5rem;
+        right: 4.6875rem;
+        bottom: 4.375rem;
+    }
+
+    #about_me_01_text01 {
+        font-size: 2rem;
+    }
+
+    #about_me_01_text02 {
+        font-size: 1.2rem;
+        bottom: 3.4375rem;
+        left: 0.375rem;
+    }
+
+    #time01 {
+        left: 27.5rem;
+        top: 0.9375rem;
+    }
+
+    /* about me box 2 */
+    .about_me02 {
+        background-size: 300px;
+        height: 375px;
+        width: 34.375rem;
+        bottom: 22.5rem;
+    }
+
+    .about_me02 h2 {
+        font-size: 2rem;
+        right: 3.75rem;
+        top: 0.7815rem;
+    }
+
+    #about_me_01_text03 {
+        font-size: 2rem;
+        bottom: 7.8125rem;
+        left: 0.3125rem;
+    }
+
+    #about_me_01_text04 {
+        font-size: 1.05rem;
+        top: 3.4375rem;
+        left: 0.375rem;
+    }
+
+    #sticker01 img {
+        width: 7.8125rem;
+        height: 7.8125rem;
+        left: 24.6875rem;
+        bottom: 15.9375rem;
+    }
+
+    #box07a3 {
+        height: 6.875rem;
+        width: 9.0625rem;
+        bottom: 40.625rem;
+        right: 25rem;
+    }
+
+    .box07a3 p {
+        font-size: 0.75rem;
+    }
+
+    .about00b {
+        height: 4.6875rem;
+        width: 11.875rem;
+        background-size: 2.5rem;
+        bottom: 47.125rem;
+        right: 19.6875rem;
+    }
+
+    .about00b p {
+        font-size: 2.5rem;
+    }
+
+    .box09 {
+        background-size: 5rem;
+        width: 56.25rem;
+        height: 28.125rem;
+        bottom: 15.1875rem;
+    }
+
+    .box09 p {
+        font-size: 1.75rem;
+    }
+
+    .skills {
+        width: 53.125rem;
+        left: 2.0315rem;
+        background-size: 156.25rem;
+    }
+    #github_box {
+        width: 50px;
+    }
+    
+    #figma_box {
+        width: 100px;
+    }
+    .logo_box {
+        width: 50%;
+    }
+
+    .work {
+        background-size: 156.25rem;
+        width: 46.875rem;
+        height: 10.9375rem;
+        left: 5.625rem;
+    }
+
+    #orange_oa_text {
+        font-size: 1rem;
+    }
+
+    .about00c {
+        height: 4.6875rem;
+        width: 11.875rem;
+        background-size: 156.25rem;
+        bottom: 16.125rem;
+        right: 11.6875rem;
+    }
+
+    .about00c p {
+        font-size: 2.5rem;
+    }
+
+    .my_work00a {
+        height: 4.6875rem;
+        width: 11.875rem;
+        background-size: 156.25rem;
+        bottom: 11.125rem;
+        right: 11.6875rem;
+    }
+
+    .my_work00a p {
+        font-size: 2.5rem;
+    }
+
+    .box10 {
+        background-size: 156.25rem;
+        width: 37.5rem;
+        height: 21.875rem;
+        bottom: 17.1875rem;
+    }
+
+    .box10 p {
+        font-size: 1.25rem;
+    }
+
+    .box10 img {
+        background-size: 156.25rem;
+        width: 400px;
+        left: 100px;
+        bottom: 11px;
+    }
+
+    .box11 {
+        background-size: 750px 450px;
+        width: 45rem;
+        height: 26.875rem;
+        bottom: 12.1875rem;
+    }
+
+    .box11 h2 {
+        font-size: 1.25rem;
+    }
+
+    .box11 p {
+        font-size: 0.75rem;
+        left: 60px;
+        top: 10px;
+    }
+
+    .cards {
+        background-size: 156.25rem;
+    }
+
+    .cards img {
+        width: 7.5%;
+        height: 7.5%;
+    }
+
+    .cards :last-child {
+        top: 7.5rem;
+        width: 12.5%;
+        height: 0%;
+    }
+
+    .box12 {
+        background-size: 40.625rem;
+        width: 32.5rem;
+        height: 21.875rem;
+        bottom: 7.1875rem;
+    }
+
+    .box12 h2 {
+        font-size: 1.25rem;
+    }
+
+    .box12 p {
+        background-size: 40.625rem;
+        font-size: 0.75rem;
+    }
+
+    .box12 img {
+        width: 200px;
+    }
+}
